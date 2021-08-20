@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import cloud_Bg  from '../../../assets/images/Cloud-background.png'
+import defaultWeahter  from '../../../assets/images/HeavyCloud.png'
 import location_pin from '../../../assets/images/pin.svg'
 import MenuBtn from '../../core/menubtn/menubtn'
 import RoundBtn from '../../core/menubtn/roundbtn'
@@ -46,6 +47,7 @@ const SideBar = props => {
                 <RoundBtn className={style.targetbtn} onClick={locatorHandler}><Target className={style.target}/></RoundBtn>
             </div>
             <div className={style.sky}>
+            {(isLoading || errorMsg) && <img src={defaultWeahter} alt='heavyCloud weather state' className={style.weather}/>}
                     {(!isLoading && !errorMsg) && <img src={weatherStatesImages[weatherStateName]} alt={weatherStateName} className={style.weather}/>}
                     <img src={cloud_Bg} className={style.cloud_img} alt=""/> 
             </div>
@@ -53,12 +55,13 @@ const SideBar = props => {
                 {(!isLoading && !errorMsg) && <p>{currentTemp}<span className={style.degreeSign}>&deg;{currentTempSign}</span></p>}
             </div>
             <div className={style.skyDefinition}>
+            {(isLoading || errorMsg) && <p>Unavailable</p>}
                 {(!isLoading && !errorMsg) && <p>{weatherStateName}</p>}
             </div>
             <div className={style.dateLocation}>
                 {(!isLoading && !errorMsg && forcastDate) && <p className={style.date}>{`${dayName(forcastDate)} . ${dayList[(newDate.getDay())]}, ${newDate.getDate()} ${monthList[newDate.getMonth()]}`}</p>}
                 <div className={style.locationWrapper}>
-                    <img src={location_pin} className={style.locationPin} alt="location pin"/>
+                {(!isLoading && !errorMsg) && <img src={location_pin} className={style.locationPin} alt="location pin"/>}
                     {(!isLoading && !errorMsg) && <p className={style.location}>{locationName}</p>}
                 </div> 
            </div>

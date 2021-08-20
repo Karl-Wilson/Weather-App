@@ -66,7 +66,7 @@ const Main = props => {
                         return <DailyForcastThumb key={index + "dailyForcast"}className={style.dailyThumb} date={dayName(day.applicable_date, dayList, monthList)} weather={weatherStatesImages[day.weather_state_name]} name={day.weather_state_name} tempMax={Math.round(futureForecastTemp[index].max.finalValue)} tempMin={Math.round(futureForecastTemp[index].min.finalValue)}  tempSign={currentTempSign}/>
                     }
                     return null;
-                }) : isLoading? 'Loading' : errorMsg? 'No data' : ''}
+                }) : isLoading? 'Loading' : errorMsg? 'Unavailable' : ''}
                 
             </div>
             <div className={style.highlights}>
