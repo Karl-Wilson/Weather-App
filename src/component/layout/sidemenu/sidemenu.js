@@ -1,12 +1,12 @@
 import {useEffect, useState} from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import {locationUrl, locationSearch } from '../../../utils/helper'
-import {currentIpUrl} from '../../../utils/apiDetails'
+import {userIpUrl} from '../../../utils/apiDetails'
 import closebtn from '../../../assets/images/close.png'
 import SearchBox from '../../core/search/searchbox'
 import MenuBtn from '../../core/menubtn/menubtn'
 import SearchResult from '../../core/searchResult/searchResult'
-import {fetchLocationThunk, fetchDataThunk, fetchCurrentLocationThunk} from '../../../store/thunks/fetchThunk'
+import {fetchLocationThunk, fetchDataThunk, fetchUserLocationThunk} from '../../../store/thunks/fetchThunk'
 import {actions} from '../../../store/reducers/weatherReducer'
 import style from './sidemenu.module.css'
 
@@ -18,7 +18,7 @@ const SideMenu = () => {
     const searchHistory = useSelector(state => state.searchHistory)
     const searchHistoryLength = searchHistory.length
     const isLoading  = useSelector(state=> state.isLoading)
-    const currentLocation = useSelector(state=> state.currentLocation)
+    const currentUserLocation = useSelector(state=> state.currentUserLocation)
     const initialLoading = useSelector(state => state.initialLoading)
     const {createSearchHistory} = actions
     const dispatch = useDispatch()
@@ -26,11 +26,11 @@ const SideMenu = () => {
     useEffect(()=>{
         if(firstTime){
             firstTime = false;  
-                dispatch(fetchCurrentLocationThunk(currentIpUrl))       
+                dispatch(fetchUserLocationThunk(userIpUrl))       
         }
-        if(!initialLoading  && currentLocation && secondTime){
+        if(!initialLoading  && currentUserLocation && secondTime){
             secondTime = false
-            let url = `${locationUrl}${locationSearch}${currentLocation}`;
+            let url = `${locationUrl}${locationSearch}${currentUserLocation}`;
             dispatch(fetchLocationThunk(url))        
         }
     if(locationId){

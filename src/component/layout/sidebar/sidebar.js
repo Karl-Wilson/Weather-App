@@ -21,14 +21,14 @@ const SideBar = props => {
     const locationName = useSelector(state=>state.locationName)
     const initialLoading = useSelector(state=>state.initialLoading)
     const newDate = new Date(forcastDate)
-    const currentLocation = useSelector(state=> state.currentLocation)
+    const currentUserLocation = useSelector(state=> state.currentUserLocation)
     let [locatorCounter, setLocatorCounter] = useState(false)
     const dispatch = useDispatch()
 
     useEffect(() => {
         if(locatorCounter){    
-            if(!initialLoading  && currentLocation){
-                    let url = `${locationUrl}${locationSearch}${currentLocation}`;
+            if(!initialLoading  && currentUserLocation){
+                    let url = `${locationUrl}${locationSearch}${currentUserLocation}`;
                     dispatch(fetchLocationThunk(url))        
             }
         }

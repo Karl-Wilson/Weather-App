@@ -42,8 +42,8 @@ const weatherSlice = createSlice({
         createSearchHistory(state, action){
             state.searchHistory.push(action.payload)
         },
-        createCurrentLocation(state, action){
-            state.currentLocation = action.payload.city
+        createUserLocation(state, action){
+            state.currentUserLocation = action.payload.city
         },
         initialLoading(state, action){
             state.initialLoading = action.payload;

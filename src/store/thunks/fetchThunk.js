@@ -1,7 +1,7 @@
 import { actions } from '../reducers/weatherReducer'
 import fetchApi from '../../utils/fetchApi'
 import { geolocationUrl, accessKey } from '../../utils/apiDetails';
-const {isLoading, errorMsg, initialLoading, createLocation, createWeatherData, createFutureForcast, createCurrentLocation} = actions;
+const {isLoading, errorMsg, initialLoading, createLocation, createWeatherData, createFutureForcast, createUserLocation} = actions;
  
 export const fetchLocationThunk = (url, data=null) => async (dispatch) => {
     dispatch(isLoading(true))
@@ -36,14 +36,14 @@ export const fetchFutureDataThunk = (url, data=null) => async (dispatch) => {
     }
     dispatch(isLoading(false))
 }
-export const fetchCurrentLocationThunk = (url, data=null) => async (dispatch) => {
+export const fetchUserLocationThunk = (url, data=null) => async (dispatch) => {
     dispatch(initialLoading(true))
     let result, name;
     try{
         result = await fetchApi(url, data);  
         const urlll = `${geolocationUrl}${result.ip}?access_key=${accessKey}`
         name = await fetchApi(urlll)
-        dispatch(createCurrentLocation(name))
+        dispatch(createUserLocation(name))
     }catch(err){
         dispatch(errorMsg('Something went wrong'))
     }
