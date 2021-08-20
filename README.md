@@ -30,7 +30,7 @@
 
 ## Overview
 
-![](./screenshot.jpg)
+![](./screenshot.png)
 
 
 I learned how to structure my code better by practicing the SOLID principles, how to implement async middleware by using redux-thunk. I also improved on my error handling. 
