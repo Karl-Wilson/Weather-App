@@ -1,0 +1,16 @@
+.loading{
+    padding: 20px;
+    background-color: white;
+    
+}
+.loading p{
+    font-size: 14px;
+    color: #000000;
+}
+
+@media (min-width: 768px) {
+    .loading p{
+        font-size: 18px;
+        font-weight: 700;
+    }
+}

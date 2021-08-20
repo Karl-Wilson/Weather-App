@@ -1,0 +1,23 @@
+.highlighthumb{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.value{
+    font-size: 36px;
+    line-height: 40px;
+}
+.bigFont{
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 75px;
+}
+.details{
+    margin-top: 20px;
+    width: 80%;
+}
+@media (min-width: 1200px) {
+    .highlighthumb{
+        width: 320px;
+    }
+}

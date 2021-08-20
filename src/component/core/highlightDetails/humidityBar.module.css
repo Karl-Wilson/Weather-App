@@ -1,0 +1,33 @@
+.humidityIndicator{
+    display: flex;
+    flex-direction: column;
+}
+.humidityRange{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.humidityIndicator p{
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    color: #A09FB1;
+}
+.humidityBar, .progress{
+    height: 8px;
+    border-radius: 80px;
+    background-color: #E7E7EB;
+}
+.humidityBar{
+    width: 100%; 
+}
+.progress{
+    width: 0%;
+    background: #FFEC65;
+}
+.humidityUnit{
+    text-align: right;
+}
+.humidityRange, .humidityBar{
+    margin-bottom: 5px;
+}

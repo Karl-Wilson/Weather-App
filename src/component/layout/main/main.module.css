@@ -1,0 +1,74 @@
+.main{
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    background: #100E1D;
+
+}
+.btnContainer, .dailyForcast, .highlights{
+    width: 100%;
+    display: flex;
+    margin-bottom: 80px;
+    flex-wrap: wrap ;
+}
+.btnContainer{
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.dailyForcast{
+    flex-direction: row;
+    justify-content: space-between;
+}
+.dailyThumb{
+    margin-bottom: 30px;
+}
+.celciusbtn, .fahrenhietbtn{
+    font-weight: 700;
+    font-size: 18px; 
+    line-height: 21px;
+}
+.celciusbtn{
+    background-color: #ffffff;
+    margin-right: 10px;
+    color: #110E3C;
+}
+.fahrenhietbtn{
+    background-color: #585676;
+    color: #E7E7EB;
+}
+.highlights{
+    flex-direction: column;
+}
+.title{
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: #e7e7eb;
+    text-align: left;
+}
+.highlightThumbs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+.hightlightThumb{
+    margin-bottom: 30px;
+}
+
+@media (min-width: 1200px) {
+    .main{
+        width: calc(100% - 400px);
+        padding: 25px 140px 25px 140px;
+    }
+    .btnContainer, .dailyForcast, .highlights{
+        flex-wrap: nowrap ;
+    }
+    .dailyThumb{
+        margin-bottom: 0px;
+    }
+}

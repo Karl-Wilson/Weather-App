@@ -1,0 +1,21 @@
+.searchResult{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    padding: 20px 12px 20px 12px;
+    box-sizing: border-box;
+}
+.searchResult:hover{
+    cursor: pointer;
+    border: 1px solid #616475;
+}
+.searchResult:hover .arrow{
+    display: block;
+}
+.arrow{
+    width: 7px;
+    display: none;
+}

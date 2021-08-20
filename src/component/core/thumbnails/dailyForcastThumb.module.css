@@ -1,0 +1,22 @@
+.dailyforcasthumb{
+    padding: 20px;
+    box-sizing: border-box;
+    width: 120px;
+    height: 180px;
+}
+.date, .tempmax{
+    color: #E7E7EB;
+}
+.icon{
+    width: 56px;
+    height: auto;
+}
+.temp{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.tempmin{
+    color: #A09FB1;
+}

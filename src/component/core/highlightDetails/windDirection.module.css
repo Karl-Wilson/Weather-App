@@ -1,0 +1,26 @@
+.windDirection{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+}
+.compass{
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background: #FFFFFF4D;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
+.compass img{
+    transform: rotate(-150deg);
+    width: 15px;
+}
+.direction p{
+    font-size: 14px;
+}
