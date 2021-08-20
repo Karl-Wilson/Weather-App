@@ -1,4 +1,4 @@
-<h1 align="center">{Your project name}</h1>
+<h1 align="center">{Weather App}</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
@@ -32,7 +32,6 @@
 
 ![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
 
-Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
 
 I learned how to structure my code better by practicing the SOLID principles, how to implement async middleware by using redux-thunk. I also improved on my error handling. 
 From my experience building this app, i noticed that one needs to plan his web app architecture properly before developing the app, know which errors that can affect the whole app or specific part.
@@ -69,9 +68,9 @@ User story(optional): I can convert temperature in Celcius to Fahrenheit and vic
 
 <!-- This section should list any articles or add-ons/plugins that helps you to complete the project. This is optional but it will help you in the future. For example: -->
 
-- [Weather data api](https://www.metaweather.com/api/)
-- [User Ip address api](https://geo.ipify.org)
-- [Ip geolocation api](https://ipstack.com/)
+- [Metaweather API](https://www.metaweather.com/api/)
+- [Ipify API](https://geo.ipify.org)
+- [Ipstack API](https://ipstack.com/)
 - [JavaScript Array Methods](https://www.w3schools.com/js/js_array_methods.asp)
 - [React Redux Quick Start](https://react-redux.js.org/tutorials/quick-start)
 - [React](https://reactjs.org/)
