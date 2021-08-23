@@ -20,11 +20,12 @@ const SideMenu = () => {
     const isLoading  = useSelector(state=> state.isLoading)
     const currentUserLocation = useSelector(state=> state.currentUserLocation)
     const initialLoading = useSelector(state => state.initialLoading)
-    const {createSearchHistory} = actions
+    const {createSearchHistory, addShowClass} = actions
     const dispatch = useDispatch()
-
+    
     useEffect(()=>{
         if(firstTime){
+            dispatch(addShowClass(style.show))
             firstTime = false;  
                 dispatch(fetchUserLocationThunk(userIpUrl))       
         }

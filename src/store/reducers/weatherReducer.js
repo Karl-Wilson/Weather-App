@@ -47,6 +47,9 @@ const weatherSlice = createSlice({
         },
         initialLoading(state, action){
             state.initialLoading = action.payload;
+        }, 
+        addShowClass(state, action){
+            state.displayClass = action.payload
         }
     }
 })

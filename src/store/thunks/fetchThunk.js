@@ -44,7 +44,6 @@ export const fetchUserLocationThunk = (url, data=null) => async (dispatch) => {
         const urlll = `${geolocationUrl}apiKey=${accessKey}&ip=${result.ip}&fields=city`
        
         name = await fetchApi(urlll)
-         console.log(name)
         dispatch(createUserLocation(name))
     }catch(err){
         dispatch(errorMsg('Something went wrong'))

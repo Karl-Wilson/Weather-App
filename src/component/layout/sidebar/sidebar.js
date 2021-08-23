@@ -22,6 +22,7 @@ const SideBar = props => {
     const initialLoading = useSelector(state=>state.initialLoading)
     const newDate = new Date(forcastDate)
     const currentUserLocation = useSelector(state=> state.currentUserLocation)
+    const displayClass = useSelector(state=>state.displayClass)
     let [locatorCounter, setLocatorCounter] = useState(false)
     const dispatch = useDispatch()
 
@@ -38,7 +39,7 @@ const SideBar = props => {
         setLocatorCounter(true)
     }
     const menuToggleHandler = ()=>{
-        document.getElementById('sideMenu').classList.toggle('sidemenu_show__3iRoN');
+        document.getElementById('sideMenu').classList.toggle(displayClass);
     }
     return(
         <div className={style.sidebar}>
