@@ -1,4 +1,4 @@
-export const locationUrl = 'https://www.metaweather.com';
+export const locationUrl = 'https://api.allorigins.win/raw?url=https://www.metaweather.com';
 export const locationSearch = '/api/location/search/?query=';
 export const locationData = '/api/location/';
 export const userIpUrl = 'https://api.ipify.org?format=json'

@@ -1,4 +1,4 @@
-export const locationUrl = 'https://www.metaweather.com/api/location/';
+export const locationUrl = 'https://api.allorigins.win/raw?url=https://www.metaweather.com/api/location/';
 export const locationSearch = 'search/?query=';
 export const dayList = ['Sun', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat']
 export const monthList = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
