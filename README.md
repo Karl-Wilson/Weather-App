@@ -6,7 +6,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://{weather-app-karl-wilson.vercel.app/}">
+    <a href="https://weather-app-karl-wilson.vercel.app/">
       Solution
     </a>
     <span> | </span>
